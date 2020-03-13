@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Stress Test</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/apt_view.css" media="all">
+  <script type="text/javascript" src="../static/js/apt_view.js"></script>
+</head>
+
+<body>
+  <p>Welcome, {{ user.username }}.<a href="/logout">logout</a></p>
+  <img id="top" src="../static/images/apt_top.png" alt="">
+  <div id="form_container">
+  <h1><a>CPU Load</a></h1>
+  <div class="form_description">
+    <h2>CPU LOAD DETAILS</h2>
+    <p>Please enter following details for loading the CPU</p>
+  
+  </div>		
+    <form class="appnitro" action="/stress/" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+  <img id="bottom" src="../static/images/apt_bottom.png" alt="">
+</body>
+
+</html>
