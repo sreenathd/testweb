@@ -1,5 +1,5 @@
 """
-WSGI config for turnkey_project project.
+WSGI config for testweb_project project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -10,8 +10,8 @@ import sys
 import os
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__))+'/..')
-sys.path.append(os.path.dirname(os.path.abspath(__file__))+'/../turnkey_project')
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "turnkey_project.settings")
+sys.path.append(os.path.dirname(os.path.abspath(__file__))+'/../testweb_project')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "testweb_project.settings")
 
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()

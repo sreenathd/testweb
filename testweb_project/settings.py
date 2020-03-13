@@ -1,5 +1,5 @@
 """
-Django settings for turnkey_project project.
+Django settings for testweb_project project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -43,7 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'turnkey_app',
+    'testweb_app',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -56,9 +56,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'turnkey_project.urls'
+ROOT_URLCONF = 'testweb_project.urls'
 
-WSGI_APPLICATION = 'turnkey_project.wsgi.application'
+WSGI_APPLICATION = 'testweb_project.wsgi.application'
 
 
 # Database
