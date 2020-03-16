@@ -1,8 +1,9 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin, admindocs
 #from testweb_app import views
 from testweb_app import views as myapp_views
 from rest_framework import routers
+#import rest_framework
 
 router = routers.DefaultRouter()
 router.register(r'users', myapp_views.UserViewSet)
@@ -29,8 +30,11 @@ urlpatterns = [
     url(r'^stress/$', myapp_views.stress_test),
     #url(r'^admin/doc/', admindocs.urls),
     url(r'^admin/', admin.site.urls),
-    #path('', router.urls),
-    #path('api-auth/', 'rest_framework.urls', namespace='rest_framework'),
+    #path('articles/2003/', views.special_case_2003),
+    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url('', include(router.urls)),
+    url('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    #url('api-auth/', rest_framework.urls),
     
 ]
 
