@@ -40,6 +40,9 @@ def main(request):
     return render(request, 'index.html', host)
 
 def stress_test(request):
+    '''
+        Does CPU stress, select the number of CPU's and the time for stress
+    '''
     if request.method == 'POST':
         form = StressForm(request.POST)
         if form.is_valid():
